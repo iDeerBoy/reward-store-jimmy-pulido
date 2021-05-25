@@ -1,0 +1,153 @@
+.Home {
+    width: 100%;
+    background-color: #fff;
+}
+
+.navigation {
+    width: 100%;
+    margin-bottom: 20px;  
+    position: relative;  
+}
+
+.navigation img{
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.navigation h1{
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 25px;
+    left: 7%;
+}
+
+.navigation .navContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 20px;
+}
+
+.filterSection{
+    width: 86%;
+    padding: 0 0 15px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ededed;    
+}
+
+.filterSection p{
+    display: none;
+}
+
+.filterSection .filters{
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filterSection .filters select{
+    width: 120px;
+    height: 26px;
+    padding-left: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+    background-color: #FFA5A5;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+}
+
+.filterSection .filters select option {
+    font-size: 12px;
+    background-color: #FCDADA;
+    color: #3D7EA6;
+}
+
+.filterSection .filters .btnOFF{
+    width: 70px;
+    height: 26px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #5C969E;
+    background-color: #EDEDED;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;    
+}
+
+@media screen and (min-width:768px){
+    .navigation h1{
+        font-size: 30px;
+        bottom: 15px;
+        left: 5%;
+    }
+
+    .navigation .navContainer{
+        width: auto;
+        right: 5%;
+    }
+
+    .filterSection {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .filterSection p{
+        display: block;
+        font-size: 12px;
+        font-weight: 300;
+        color: #5C969E;
+    }
+
+    .filterSection .filters {
+        width: 320px;
+    }
+
+    .filterSection .filters select {
+        width: 140px;        
+        font-size: 14px;
+    }
+
+    .filterSection .filters .btnOFF{
+        width: 80px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width:1224px){
+    .navigation img{
+        height: 250px;
+    }
+
+    .navigation h1{
+        font-size: 55px;
+        left: 8%;
+    }
+
+    .navigation .navContainer{
+        right: 8%;
+    }
+
+    .filterSection {
+        width: 84%;
+    }
+
+    .filterSection p{
+        font-size: 14px;
+    }
+
+    .filterSection .filters select, .filterSection .filters .btnOFF{
+        height: 30px;
+    }
+}

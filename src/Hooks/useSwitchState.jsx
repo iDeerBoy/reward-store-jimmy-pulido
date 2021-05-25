@@ -12,10 +12,15 @@ function useSwitchState(value){
         setState(true)
     }
 
+    const setFalse = () => {
+        setState(false)
+    }
+
     return {
         state,
         setSwitch,
-        setTrue
+        setTrue,
+        setFalse
     }
 }
 

@@ -5,13 +5,21 @@ import logo from '../../Images/logo.svg';
 
 function Header (){
 
-    const userData = useContext(ContextUser)
+    const { userData, userLoaded } = useContext(ContextUser)
 
     return (
-        <header>
-            {/* <img src={logo} alt="logo"></img> */}
-            <h2>{userData.name}</h2>
-            <p>{userData.points}</p>
+        <header className="header">
+            {
+                !userLoaded 
+                ? <p>cargando</p>
+                : (
+                    <>
+                        <img src={logo} alt="logo"></img>
+                        <h2>{userData.name}</h2>
+                        <p>{userData.points}</p>
+                    </>
+                )
+            }
         </header>
     )
 }

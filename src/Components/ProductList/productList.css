@@ -1,0 +1,41 @@
+.productList{
+    width: 100%;
+    padding: 20px 7% 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.productList .loading{
+    font-size: 30px;
+    font-weight: 500;
+    color: #FFA5A5;
+}
+
+.productList .btnContainer{
+    width: 100%;
+}
+
+.productList .btnContainer .btnPage{
+    width: 25px;
+    height: 25px;
+    margin: 0 auto 20px;
+    background-color: #fff;
+    box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width:768px){
+    .productList {        
+        padding: 20px 5% 0;
+    }
+}
+
+@media screen and (min-width:1224px){
+    .productList {        
+        padding: 50px 8% 0;
+    }
+}
