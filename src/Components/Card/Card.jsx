@@ -1,8 +1,8 @@
+import './card.css';
 import React, { useContext }  from 'react';
 import { ContextUser } from '../../Context/user';
-import './card.css';
-import buyImg from '../../Images/comprar.png';
 import useSwitchState from '../../Hooks/useSwitchState';
+import buyImg from '../../Images/comprar.png';
 
 function Card({name, category, img, cost, _id}){
 
@@ -54,12 +54,11 @@ function Card({name, category, img, cost, _id}){
                 }
             </div>
                 <img src={img.url} alt={name} />
-            {purchase.state ? <p className="cost">Purchase</p> : <p className="cost">{cost}</p>}
+            {purchase.state ? <p className="cost">Purchased</p> : <p className="cost">{cost}</p>}
             {showRedeem.state && userData.points >= cost && <div className="redeem"><p>Redeem</p></div>}
             {failToPurchase.state && <div className="noRedeem"><p>You need<br/>more credits</p></div>}
         </div>
     )
-
 }
 
 export default Card;

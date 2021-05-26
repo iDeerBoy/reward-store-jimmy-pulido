@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
 import './history.css'
+import React, { useEffect, useState } from 'react';
 import BtnNavegation from '../../Components/Btn-navegation/BtnNavigation';
 
 function History(){
@@ -28,7 +28,6 @@ function History(){
                     <BtnNavegation  titel="Home" to="" btnClass="btnBlue" />
                     <BtnNavegation  titel="Credits" to="Credits" />
                 </nav>
-
             </div>
             <div className="historyList">
                 {

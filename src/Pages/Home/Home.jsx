@@ -10,21 +10,26 @@ function Home() {
     
     const { productsData, setUpdateProducts, category, setCategory } = useContext(ContextProducts);    
     const firstPage = useSwitchState(true);
-    //const Lowest = useSwitchState(false);
-    //const Highest = useSwitchState(false);
+    const Lowest = useSwitchState(false);
+    const Highest = useSwitchState(false);
 
-    function filter(e){    
+    function LowestSwitch(){
+        Lowest.setSwitch(); 
+        Highest.setFalse()
+    }
 
+    function HighestSwitch(){
+        Highest.setSwitch(); 
+        Lowest.setFalse()
+    }
+
+    function filter(e){  
         let updateList = productsData
         .filter((value) =>{
             return e.target.value === "All Categories"
             ? value
             :value.category === e.target.value            
-        })
-        // .filter((value) =>{
-        //     return Lowest.state && value.sort((a,b) => a.precio - b.precio)
-        // })
-         
+        })         
         setUpdateProducts(updateList);
         setCategory(e.target.value)
         firstPage.setTrue()
@@ -33,7 +38,7 @@ function Home() {
     return (
         <section className="Home">
             <div className="navigation">
-                <img src={imgAll} alt="All categories" />
+                <img src={imgAll} alt="categories" />
                 <h1>{category}</h1>
                 <nav className="navContainer">
                     <BtnNavigation titel="History" to="History" btnClass="btnBlue" />
@@ -51,24 +56,17 @@ function Home() {
                         <option value="Gaming">Gaming</option>
                         <option value="Phones">Phones</option>
                     </select> 
-                    {/* <div className="btnOFF" onClick={Lowest.setSwitch, filter}>Lowest</div>
-                    <div className="btnOFF">Highest</div> */}
+                    <div className={`btnOFF ${Lowest.state ? "btnActive" : ""}`} onClick={LowestSwitch}>Lowest</div>
+                    <div className={`btnOFF ${Highest.state ? "btnActive" : ""}`} onClick={HighestSwitch}>Highest</div>
                 </div>
             </div>
-            <ProductList firstPage={firstPage}/>
+            <ProductList 
+                firstPage={firstPage}
+                Lowest={Lowest.state}
+                Highest={Highest.state}
+            />
         </section>
     )
 }
 
 export default Home;
-
-
-        // .filter((value) => {
-        //     return e.target.value === "All Cost"
-        //     ? value
-        //     : (
-        //         e.target.value === "Highest"
-        //         ? value.sort(() => value.cost - value.cost)
-        //         : value
-        //     )
-        // })

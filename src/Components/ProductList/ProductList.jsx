@@ -1,16 +1,27 @@
+import './productList.css';
 import React, { useContext } from 'react';
 import { ContextProducts } from '../../Context/products';
-import './productList.css'
 import Arrow1 from '../../Images/Arrow1.svg';
 import Arrow2 from '../../Images/Arrow2.svg';
 import Card from '../Card/Card';
 
-function ProductList({firstPage}) {
+function ProductList({firstPage, Lowest, Highest}) {
+
+    function filterCost(value){
+        const list = [...value]
+        if (Lowest){
+            return list.sort((a, b) => a.cost - b.cost)
+        } else if (Highest){            
+            return list.sort((a, b) => b.cost - a.cost)
+        } else if (!Lowest && !Highest){
+            return value
+        }        
+    }
         
     const { updateProducts, stateProducts } = useContext(ContextProducts);
-    const pageOne = updateProducts.slice(0, 16)
-    const pageTwo = updateProducts.slice(16, 32)
-    const inconPage = firstPage.state ? Arrow2 : Arrow1
+    const pageOne = filterCost(updateProducts).slice(0, 16)
+    const pageTwo = filterCost(updateProducts).slice(16, 32)
+    const inconPage = firstPage.state ? Arrow2 : Arrow1 
 
     return (
         <section className="productList" id="productList">

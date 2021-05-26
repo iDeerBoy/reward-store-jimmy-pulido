@@ -1,4 +1,5 @@
-import './footer.css'
+import './footer.css';
+import React from 'react';
 import gitHub from '../../Images/GitHub-Mark-02.svg';
 import linkEdin from '../../Images/linkedin.svg';
 
