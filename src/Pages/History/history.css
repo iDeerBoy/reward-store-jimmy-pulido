@@ -1,8 +1,154 @@
 .history {
     width: 100%;
-    padding: 0 7%;
+    padding: 0 7% 20px;
 }
 
 .history .navigationHistory{
     width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.history .navigationHistory h1{
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+    color: #3D7EA6;
+    margin-top: 20px;
+}
+
+.history .navigationHistory .navContainerH{
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #EDEDED;
+}
+
+.history .historyList{
+    width: 100%;
+    min-height: 200px;
+    margin-top: 30px;
+    padding: 0 5%;
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px 3px rgba(0, 0, 0, 0.15);
+}
+
+.history .historyList .historyEmpy {
+    font-size: 16px;
+    line-height: 25px;
+    color: #FFA5A5;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.history .historyList .historyProduct {
+    width: 100%;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #EDEDED;
+}
+
+.history .historyList .historyProduct:last-child{
+    border-bottom: none;
+}
+
+.history .historyList .historyProduct img{
+    display: none;
+}
+
+.history .historyList .historyProduct h2{
+    font-size: 14px;
+    font-weight: 300;
+    color: #3D7EA6;
+}
+
+.history .historyList .historyProduct h3{
+    display: none;
+}
+
+.history .historyList .historyProduct p{
+    font-size: 14px;
+    color: #FFA5A5;
+}
+
+@media screen and (min-width:768px){
+    .history {
+        padding: 0 5% 35px;
+    }
+
+    .history .navigationHistory{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 20px 0;   
+        border-bottom: 1px solid #EDEDED;    
+    }
+
+    .history .navigationHistory h1{
+        font-size: 25px;
+        text-align: left;
+        margin-top: 0;
+    }
+
+    .history .navigationHistory .navContainerH{
+        width: auto;
+        padding: 0;
+        border-bottom: none;
+    }
+
+    .history .historyList{
+        margin-top: 40px;
+    }
+
+    .history .historyList .historyProduct h2{
+        font-size: 16px;
+    }
+    
+    .history .historyList .historyProduct h3{
+        display: block;
+        font-size: 15px;
+        font-weight: 200;
+        text-align: left;
+        color: #5C969E;
+    }       
+}
+
+@media screen and (min-width:1224px){
+    .history {
+        padding: 0 8% 40px;
+    }
+
+    .history .navigationHistory{        
+        padding: 25px 0;   
+    }
+
+    .history .navigationHistory h1{
+        font-size: 35px;
+    }
+
+    .history .historyList{
+        margin-top: 50px;
+    }
+
+    .history .historyList .historyProduct img{
+        display: block;
+        width: 40px;
+        height: 40px;
+        object-fit: scale-down;
+    }
+
+    .history .historyList .historyProduct h2{
+        font-size: 18px;
+    }
+
+    .history .historyList .historyProduct h3{
+        font-size: 16;
+    }
+
+    .history .historyList .historyProduct p{
+        font-size: 18px;
+    }
 }

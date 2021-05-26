@@ -1,7 +1,7 @@
+import './Home.css';
 import React, { useContext }  from 'react';
 import { ContextProducts } from '../../Context/products';
 import useSwitchState from '../../Hooks/useSwitchState';
-import './Home.css'
 import imgAll from '../../Images/img-allCategories.png';
 import BtnNavigation from '../../Components/Btn-navegation/BtnNavigation';
 import ProductList from '../../Components/ProductList/ProductList';
@@ -9,7 +9,9 @@ import ProductList from '../../Components/ProductList/ProductList';
 function Home() {
     
     const { productsData, setUpdateProducts, category, setCategory } = useContext(ContextProducts);    
-    const firstPage = useSwitchState(true)
+    const firstPage = useSwitchState(true);
+    //const Lowest = useSwitchState(false);
+    //const Highest = useSwitchState(false);
 
     function filter(e){    
 
@@ -19,6 +21,10 @@ function Home() {
             ? value
             :value.category === e.target.value            
         })
+        // .filter((value) =>{
+        //     return Lowest.state && value.sort((a,b) => a.precio - b.precio)
+        // })
+         
         setUpdateProducts(updateList);
         setCategory(e.target.value)
         firstPage.setTrue()
@@ -31,7 +37,7 @@ function Home() {
                 <h1>{category}</h1>
                 <nav className="navContainer">
                     <BtnNavigation titel="History" to="History" btnClass="btnBlue" />
-                    <BtnNavigation titel="Credits" to="Credits" btnClass="" />
+                    <BtnNavigation titel="Credits" to="Credits" />
                 </nav>
             </div>
             <div className="filterSection">
@@ -45,8 +51,8 @@ function Home() {
                         <option value="Gaming">Gaming</option>
                         <option value="Phones">Phones</option>
                     </select> 
-                    <div className="btnOFF">Lowest</div>
-                    <div className="btnOFF">Highest</div>
+                    {/* <div className="btnOFF" onClick={Lowest.setSwitch, filter}>Lowest</div>
+                    <div className="btnOFF">Highest</div> */}
                 </div>
             </div>
             <ProductList firstPage={firstPage}/>

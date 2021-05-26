@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function useSring(value){
+function useString(value){
 
     const [state, setState] = useState(value)
 
@@ -14,4 +14,4 @@ function useSring(value){
     }
 }
 
-export default useSring;
+export default useString;

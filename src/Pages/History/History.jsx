@@ -24,19 +24,19 @@ function History(){
         <section className="history">
             <div className="navigationHistory">
                 <h1>History</h1>
-                <nav className="navContainerHistory">                    
+                <nav className="navContainerH">                    
                     <BtnNavegation  titel="Home" to="" btnClass="btnBlue" />
-                    <BtnNavegation  titel="Credits" to="Credits" btnClass="" />
+                    <BtnNavegation  titel="Credits" to="Credits" />
                 </nav>
 
             </div>
-            <div>
+            <div className="historyList">
                 {
                 history.length <= 0
-                ? <p>Lo que compres aparecera acá</p>
+                ? <p className="historyEmpy">Anything you buy<br/>will appear here</p>
                 : history.map((i, index) => {
                     return (
-                        <div key={index}>
+                        <div key={index} className="historyProduct">
                             <img src={i.img.url} alt={i.name} />
                             <h2>{i.name}</h2>
                             <h3>{i.category}</h3>

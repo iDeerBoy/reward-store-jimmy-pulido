@@ -47,7 +47,7 @@
 .filterSection .filters{
     width: 280px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .filterSection .filters select{
