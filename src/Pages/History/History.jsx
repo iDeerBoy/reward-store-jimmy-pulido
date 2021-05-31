@@ -25,8 +25,8 @@ function History(){
             <div className="navigationHistory">
                 <h1>History</h1>
                 <nav className="navContainerH">                    
-                    <BtnNavegation  titel="Home" to="" btnClass="btnBlue" />
-                    <BtnNavegation  titel="Credits" to="Credits" />
+                    <BtnNavegation  titel="Home" to="reward-store-jimmy-pulido" btnClass="btnBlue" />
+                    <BtnNavegation  titel="Credits" to="reward-store-jimmy-pulido/Credits" />
                 </nav>
             </div>
             <div className="historyList">

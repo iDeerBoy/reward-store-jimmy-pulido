@@ -41,8 +41,8 @@ function Home() {
                 <img src={imgAll} alt="categories" />
                 <h1>{category}</h1>
                 <nav className="navContainer">
-                    <BtnNavigation titel="History" to="History" btnClass="btnBlue" />
-                    <BtnNavigation titel="Credits" to="Credits" />
+                    <BtnNavigation titel="History" to="reward-store-jimmy-pulido/History" btnClass="btnBlue" />
+                    <BtnNavigation titel="Credits" to="reward-store-jimmy-pulido/Credits" />
                 </nav>
             </div>
             <div className="filterSection">

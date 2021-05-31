@@ -15,9 +15,9 @@ function App() {
         <Header />
         <BrowserRouter>
           <Switch>          
-            <Route exact path="/" component={Home} />
-            <Route exact path="/History" component={History} />
-            <Route exact path="/Credits" component={Credits} />
+            <Route exact path="/reward-store-jimmy-pulido" component={Home} />
+            <Route exact path="/reward-store-jimmy-pulido/History" component={History} />
+            <Route exact path="/reward-store-jimmy-pulido/Credits" component={Credits} />
             <Route component={NoFound} />
           </Switch>
         </BrowserRouter>

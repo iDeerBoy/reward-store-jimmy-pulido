@@ -25,14 +25,13 @@ function Card({name, category, img, cost, _id}){
                 "productId": _id
             })
             })
-            const data = await res.json()
-            console.log(data)
-            purchase.setTrue()
+            res.json();
+            purchase.setTrue();
             pointsUsed.setSwitch();
         } else {
-            failToPurchase.setTrue()
+            failToPurchase.setTrue();
             setTimeout(() => {
-                failToPurchase.setFalse()
+                failToPurchase.setFalse();
             }, 1500);
         }
     }
