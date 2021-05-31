@@ -31,7 +31,7 @@ function Credits(){
                 "amount": credits
             })            
         })
-        res.json();
+        res.json()
         pointsUsed.setSwitch();
     } 
 
@@ -55,8 +55,8 @@ function Credits(){
             <div className="navigationCredits">
                     <h1>Buy credits</h1>
                     <div className="navContainerC">
-                        <BtnNavegation  titel="Home" to="reward-store-jimmy-pulido" btnClass="btnBlue" />
-                        <BtnNavegation  titel="History" to="reward-store-jimmy-pulido/History" />
+                        <BtnNavegation  titel="Home" to="" btnClass="btnBlue" />
+                        <BtnNavegation  titel="History" to="History" />
                     </div>
             </div>
             <div className="formContainer">

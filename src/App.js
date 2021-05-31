@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route, HashRouter, Switch } from 'react-router-dom';
 import Header from './Components/Header/Header';
 import Home from './Pages/Home/Home';
 import History from './Pages/History/History';
@@ -13,14 +13,14 @@ function App() {
     <div className="App">
       <div className="appContainer">
         <Header />
-        <BrowserRouter>
+        <HashRouter>
           <Switch>          
-            <Route exact path="/reward-store-jimmy-pulido" component={Home} />
-            <Route exact path="/reward-store-jimmy-pulido/History" component={History} />
-            <Route exact path="/reward-store-jimmy-pulido/Credits" component={Credits} />
+            <Route exact path="/" component={Home} />
+            <Route exact path="/History" component={History} />
+            <Route exact path="/Credits" component={Credits} />
             <Route component={NoFound} />
           </Switch>
-        </BrowserRouter>
+        </HashRouter>
         <Footer />
       </div>
     </div>
